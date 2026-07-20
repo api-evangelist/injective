@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.injective.network/developers-native/query-chain + query-indexer
+summary:
+  types: [none-public, signature-based-transactions]
+  api_key_in: []
+  oauth2_flows: []
+description: >-
+  Injective's public read APIs (Chain LCD/REST, Tendermint RPC, and the Indexer
+  gRPC/gRPC-web/REST + Chain Stream WebSocket) are open, permissionless endpoints
+  that require no API key or OAuth token — they are rate-limited public
+  infrastructure. WRITE access is not key-based: state changes are performed by
+  broadcasting cryptographically signed transactions. Signing uses either native
+  Cosmos secp256k1 (bech32 inj1... accounts) or Ethereum EIP-712 typed-data signing
+  (0x... keys), with optional AuthZ grant delegation for session-based auto-signing.
+schemes:
+- name: public-read
+  type: none
+  applies_to: [Chain LCD/REST, Tendermint RPC, Indexer gRPC/REST, Chain Stream WS]
+  note: no credential required; rate-limited public sentry endpoints
+- name: cosmos-signature
+  type: transaction-signature
+  scheme: secp256k1 (Cosmos), bech32 address inj1...
+  applies_to: [transaction broadcast]
+- name: eip712-signature
+  type: transaction-signature
+  scheme: EIP-712 typed data, EVM address 0x...
+  applies_to: [transaction broadcast, Injective EVM]
+- name: authz-delegation
+  type: on-chain-grant
+  scheme: Cosmos AuthZ MsgGrant for session-based/auto signing
+  docs: https://github.com/InjectiveLabs/agent-skills (injective-trading-autosign)

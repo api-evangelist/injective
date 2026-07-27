@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/InjectiveLabs + npm/PyPI registries + docs.injective.network SDK index
+packages:
+- language: typescript
+  registry: npm
+  name: "@injectivelabs/sdk-ts"
+  version: 1.20.25
+  url: https://www.npmjs.com/package/@injectivelabs/sdk-ts
+  install: npm install @injectivelabs/sdk-ts
+  repo: https://github.com/InjectiveLabs/injective-ts
+  docs: https://docs.ts.injective.network/
+  official: true
+- language: python
+  registry: pypi
+  name: injective-py
+  version: 1.16.0
+  url: https://pypi.org/project/injective-py/
+  install: pip install injective-py
+  repo: https://github.com/InjectiveLabs/sdk-python
+  official: true
+- language: go
+  registry: pkg.go.dev
+  name: github.com/InjectiveLabs/sdk-go
+  url: https://pkg.go.dev/github.com/InjectiveLabs/sdk-go
+  install: go get github.com/InjectiveLabs/sdk-go
+  repo: https://github.com/InjectiveLabs/sdk-go
+  official: true
+- language: rust
+  registry: crates.io
+  name: injective-std
+  url: https://crates.io/crates/injective-std
+  repo: https://github.com/InjectiveLabs/injective-rust
+  official: true
+- language: rust
+  registry: crates.io
+  name: injective-cosmwasm
+  url: https://crates.io/crates/injective-cosmwasm
+  repo: https://github.com/InjectiveLabs/cw-injective
+  official: true
+  note: CosmWasm bindings for Injective modules
+- language: typescript
+  registry: npm
+  name: "@injectivelabs/ui-common"
+  url: https://www.npmjs.com/package/@injectivelabs/ui-common
+  repo: https://github.com/InjectiveLabs/injective-ui
+  official: true
+  note: UI packages for building on Injective (client-side, not a server SDK)

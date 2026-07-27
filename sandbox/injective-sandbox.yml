@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.injective.network/developers/network-information + testnet.faucet.injective.network
+description: >-
+  Injective provides full test networks (testnet and devnet) that mirror mainnet,
+  with public endpoints and a faucet for free test INJ. This is the blockchain
+  equivalent of a sandbox: same code paths, valueless test tokens.
+networks:
+- name: testnet
+  chain_id: injective-888
+  evm_chain_id: 1439
+  tm_rpc: https://testnet.sentry.tm.injective.network:443
+  explorer: https://testnet.explorer.injective.network/
+  faucet: https://testnet.faucet.injective.network/
+- name: devnet
+  chain_id: injective-777
+  tm_rpc: https://devnet.sentry.tm.injective.network:443
+mainnet_reference:
+  chain_id: injective-1
+  evm_chain_id: 1776
+  tm_rpc: https://sentry.tm.injective.network:443
+  lcd: https://sentry.lcd.injective.network
+  indexer: https://api.injective.network
+selection:
+  mechanism: >-
+    Sandbox vs live is selected by network (Chain ID + endpoint host), not by a key
+    prefix. SDKs accept a Network enum (Mainnet / Testnet / Devnet). The injective-py
+    and sdk-ts clients expose network presets that resolve the correct endpoints.
+faucet:
+  url: https://testnet.faucet.injective.network/
+  note: dispenses valueless test INJ to a testnet address for development.

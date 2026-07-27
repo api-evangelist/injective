@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: derived
+source: docs.injective.network + InjectiveLabs GitHub (cosmos-sdk, cometbft, injective-core)
+description: >-
+  Cross-cutting standards Injective conforms to, derived from its documented
+  architecture (Cosmos SDK application chain with CometBFT consensus, IBC, and an
+  EVM execution layer) and its public API surfaces. Injective is a decentralized
+  blockchain, not an OAuth/enterprise SaaS API, so identity-and-access standards
+  such as OAuth2/OIDC/SCIM do not apply.
+standards:
+- id: cosmos-sdk
+  conforms: true
+  evidence: Injective Chain is built on the Cosmos SDK (forked cosmos-sdk in InjectiveLabs org)
+- id: cometbft-tendermint
+  conforms: true
+  evidence: Consensus via CometBFT; Tendermint RPC node at sentry.tm.injective.network
+- id: ibc
+  conforms: true
+  evidence: IBC transfers documented (bridge from Cosmos chains via Keplr/IBC)
+- id: cosmos-lcd-rest
+  conforms: true
+  evidence: Cosmos SDK gRPC-gateway LCD/REST + Swagger at sentry.lcd.injective.network/swagger
+- id: grpc
+  conforms: true
+  evidence: Indexer and chain exposed over gRPC and gRPC-web; protobuf on buf.build/injectivelabs/core
+- id: protobuf
+  conforms: true
+  evidence: Chain and indexer messages defined in protobuf (buf.build/injectivelabs)
+- id: ethereum-json-rpc
+  conforms: true
+  evidence: Injective EVM exposes standard Ethereum JSON-RPC (EVM chain id 1776)
+- id: eip712
+  conforms: true
+  evidence: EIP-712 typed-data signing supported for transactions (sdk-go EIP712 tooling)
+- id: eip1559
+  conforms: true
+  evidence: Injective EVM documented as EIP-1559 style fee market
+- id: websocket-streaming
+  conforms: true
+  evidence: Chain Stream WebSocket server streams real-time chain/exchange events
+- id: oauth2
+  conforms: false
+  evidence: public chain/indexer endpoints are open; no OAuth2 authorization server
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors use gRPC/Cosmos codespace+code and per-module registries, not application/problem+json

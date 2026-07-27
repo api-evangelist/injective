@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: derived
+source: docs.injective.network (indexer + chain queries) + Cosmos SDK conventions
+description: >-
+  Cross-cutting request/response semantics for the Injective Chain and Indexer APIs,
+  derived from the documented query/stream surface and Cosmos SDK conventions.
+authentication:
+  read: none (open public endpoints)
+  write: signed transactions (secp256k1 / EIP-712), see authentication/injective-authentication.yml
+idempotency:
+  http_header: null
+  mechanism: account-sequence-number
+  note: >-
+    There is no HTTP Idempotency-Key contract. Transaction replay protection is
+    provided at the protocol level by the monotonic account sequence number (nonce):
+    a transaction signed for a given sequence can only be committed once; a stale
+    sequence is rejected (Cosmos sdk error 32, incorrect account sequence). This is
+    protocol-level exactly-once semantics, not an HTTP idempotency-key header.
+pagination:
+  style: cosmos-page-request
+  request_params: [pagination.key, pagination.offset, pagination.limit, pagination.count_total, pagination.reverse]
+  response_fields: [pagination.next_key, pagination.total]
+  note: LCD/gRPC use Cosmos PageRequest/PageResponse; the Indexer REST/gRPC use skip/limit style params per endpoint.
+versioning:
+  scheme: chain-upgrade governance + per-SDK semver
+  network_selector: Chain ID (injective-1 / injective-888) and network-specific host
+streaming:
+  transport: WebSocket (Chain Stream server) + gRPC streaming (Indexer stream endpoints)
+  surface: account, spot, derivatives, oracle, portfolio, auction, explorer streams
+  see: asyncapi/injective-chain-stream-webhooks.yml
+errors:
+  envelope: cosmos codespace+code (see errors/injective-error-codes.yml)
+rate_limiting:
+  note: public sentry/indexer endpoints are rate-limited; run a dedicated node/indexer for higher throughput
+cross_links:
+  errors: errors/injective-error-codes.yml
+  lifecycle: lifecycle/injective-lifecycle.yml
+  authentication: authentication/injective-authentication.yml

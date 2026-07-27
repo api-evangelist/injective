@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.injective.network/developers/injectived/index
+name: injectived
+description: >-
+  injectived is the official command-line client and full-node daemon for the
+  Injective Chain (a Cosmos SDK / CometBFT application). It runs nodes and validators
+  and provides a complete transaction and query surface over the chain modules.
+install:
+  binary_releases: https://github.com/InjectiveLabs/injective-chain-releases/releases
+  docs: https://docs.injective.network/developers/injectived/install
+command_groups:
+- group: tx
+  purpose: Build, sign, and broadcast transactions (bank send, staking delegate, gov vote, exchange orders, tokenfactory, peggy, wasm, permissions)
+- group: query
+  purpose: Query chain state for any module (auth, bank, staking, gov, exchange, oracle, tokenfactory, insurance, auction, peggy)
+- group: keys
+  purpose: Manage local keys/wallets (add, list, show, delete, import/export)
+- group: start
+  purpose: Run the Injective full node / validator daemon
+- group: genesis
+  purpose: Prepare and manage genesis, gentx, and validator setup
+- group: status
+  purpose: Query node status and sync state
+key_flows:
+- Run a mainnet/testnet node (Chain ID injective-1 / injective-888)
+- Create and manage wallets, then sign and broadcast transactions
+- Query module state directly from the chain without an indexer
+notes: The binary is catalogued in packages/ via injective-chain-releases.

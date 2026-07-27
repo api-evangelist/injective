@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of /.well-known/* on Injective hosts
+description: >-
+  Probed the /.well-known/ discovery surface on Injective's website, docs, and API
+  hosts. No well-known discovery documents are published (all requests returned
+  404, or 501 Not Implemented on the LCD gateway). Recorded here as honest negative
+  results — no WellKnown/SecurityTxt pointer is claimed.
+hosts:
+- host: https://api.injective.network
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://sentry.lcd.injective.network
+  documents:
+  - {path: /.well-known/security.txt, status: 501}
+  - {path: /.well-known/openid-configuration, status: 501}
+  - {path: /.well-known/oauth-authorization-server, status: 501}
+  - {path: /.well-known/api-catalog, status: 501}
+  - {path: /.well-known/ai-plugin.json, status: 501}
+- host: https://injective.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+- host: https://docs.injective.network
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}

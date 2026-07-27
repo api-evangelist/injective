@@ -1,0 +1,45 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.injective.network/developers-native/injective (per-module Error Codes references)
+format: cosmos-codespace-code
+description: >-
+  Injective returns errors as Cosmos SDK style {codespace, code, message} pairs
+  (surfaced over gRPC status and in the LCD/RPC tx response). Each chain module owns
+  a codespace and a registry of numeric error codes. This catalog indexes the
+  published per-module error-code references; each page enumerates the module's codes
+  with their meanings.
+envelope:
+  fields: [codespace, code, raw_log]
+  transport: gRPC status + tx response (LCD/RPC)
+modules:
+- module: auction
+  codespace: auction
+  ref: https://docs.injective.network/developers-native/injective/auction/99_errors
+- module: exchange
+  codespace: exchange
+  ref: https://docs.injective.network/developers-native/injective/exchange/99_errors
+- module: insurance
+  codespace: insurance
+  ref: https://docs.injective.network/developers-native/injective/insurance/99_errors
+- module: ocr
+  codespace: ocr
+  ref: https://docs.injective.network/developers-native/injective/ocr/99_errors
+- module: oracle
+  codespace: oracle
+  ref: https://docs.injective.network/developers-native/injective/oracle/99_errors
+- module: peggy
+  codespace: peggy
+  ref: https://docs.injective.network/developers-native/injective/peggy/99_errors
+- module: permissions
+  codespace: permissions
+  ref: https://docs.injective.network/developers-native/injective/permissions/99_errors
+- module: tokenfactory
+  codespace: tokenfactory
+  ref: https://docs.injective.network/developers-native/injective/tokenfactory/99_errors
+- module: wasmx
+  codespace: wasmx
+  ref: https://docs.injective.network/developers-native/injective/wasmx/99_errors
+notes: >-
+  Standard Cosmos SDK codespace (sdk) errors also apply (e.g. 5 insufficient funds,
+  11 out of gas, 32 incorrect account sequence). Exchange is the richest module
+  registry (order/market/margin validation errors).

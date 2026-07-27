@@ -1,0 +1,52 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/InjectiveLabs/agent-skills
+install: npx skills add InjectiveLabs/agent-skills --skill [skill-name]
+license: Apache-2.0
+description: >-
+  Official Injective Agent Skills — packaged Claude Agent Skills that teach an agent
+  how to operate against the Injective chain, exchange, and tooling. Published by
+  InjectiveLabs and installed via `npx skills add`.
+skills:
+- file: injective-cli
+  name: Injective CLI
+  purpose: Query and transact against the Injective chain using the injectived binary with wallet and gas management
+- file: injective-evm-developer
+  name: Injective EVM Developer
+  purpose: Develop EVM smart contracts and dApps on Injective
+- file: injective-rfq-integrations
+  name: Injective RFQ Integrations
+  purpose: Integrate Injective RFQ taker flows, autosign settlement, and quote monitoring
+- file: injective-usdc-integration
+  name: Injective USDC Integration
+  purpose: Integrate native USDC via Circle CCTP, including deposits and withdrawals
+- file: injective-frontend-wallet
+  name: Injective Frontend Wallet
+  purpose: Build browser frontends for signing Injective transactions with multiple wallet options
+- file: injective-trading-frontend-ux
+  name: Injective Trading Frontend UX
+  purpose: Develop trading UI components for RFQ, orderbook, and wallet integration
+- file: injective-mcp-servers
+  name: Injective MCP Servers
+  purpose: Set up MCP servers critical to Injective operations
+- file: injective-trading-account
+  name: Injective Trading Account
+  purpose: Manage trading accounts via MCP servers
+- file: injective-trading-tokens
+  name: Injective Trading Tokens
+  purpose: Look up metadata for any Injective token or denom and manage transfers
+- file: injective-trading-autosign
+  name: Injective Trading Autosign
+  purpose: Set up AuthZ delegation on Injective for session-based auto-trading
+- file: injective-trading-bridge
+  name: Injective Trading Bridge
+  purpose: Bridge tokens using deBridge DLN or Peggy from multiple chains
+- file: injective-trading-chain-analysis
+  name: Injective Trading Chain Analysis
+  purpose: Analyze Injective protocol specifications and Go source code
+- file: injective-trading-market-data
+  name: Injective Trading Market Data
+  purpose: Access real-time perpetual futures market data and oracle prices
+- file: injective-trading-staking
+  name: Injective Trading Staking
+  purpose: Query staking delegations, rewards, and validator information

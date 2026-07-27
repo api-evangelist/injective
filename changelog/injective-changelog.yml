@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/InjectiveLabs/injective-chain-releases/releases
+scheme: semver-chain-upgrades
+description: >-
+  Injective Chain releases are published as tagged binaries in the
+  injective-chain-releases repository; network upgrades are coordinated via
+  on-chain governance software-upgrade proposals. SDK changelogs are tracked per
+  package (sdk-ts, sdk-python, sdk-go). This artifact points at the canonical
+  dated release feeds; consult them for the authoritative recent window.
+feeds:
+- name: Injective Chain binary releases
+  url: https://github.com/InjectiveLabs/injective-chain-releases/releases
+- name: TypeScript SDK releases
+  url: https://github.com/InjectiveLabs/injective-ts/releases
+- name: Python SDK releases
+  url: https://github.com/InjectiveLabs/sdk-python/releases
+- name: Go SDK releases
+  url: https://github.com/InjectiveLabs/sdk-go/releases
+- name: Governance (software-upgrade proposals)
+  url: https://hub.injective.network/proposals
+notes: >-
+  Chain version changes ship as governance-gated software upgrades (halt-height
+  coordinated across validators); package versions follow semver. Current pinned
+  SDK examples at capture: @injectivelabs/sdk-ts 1.20.25, injective-py 1.16.0.

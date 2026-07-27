@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.injective.network/ + https://injective.instatus.com/
+versioning:
+  scheme: chain-upgrade (governance software-upgrade proposals) + semver per SDK/API
+  chain_ids:
+    mainnet: injective-1
+    testnet: injective-888
+    devnet: injective-777
+  evm_chain_ids:
+    mainnet: 1776
+    testnet: 1439
+  docs: https://docs.injective.network/developers/network-information
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    Injective coordinates breaking chain changes through on-chain governance
+    software-upgrade proposals rather than an HTTP deprecation/Sunset-header policy.
+    No RFC 8594 Deprecation/Sunset header contract is documented for the public
+    LCD/Indexer endpoints.
+sla:
+  url: null
+  note: Public sentry endpoints are best-effort community/rate-limited infrastructure; operators can run dedicated nodes.
+status_page: https://injective.instatus.com/

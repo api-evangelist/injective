@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.injective.network/infra/websocket-server + developers-native/query-indexer-stream
+spec_type: Webhooks
+description: >-
+  Injective exposes a real-time event surface (not classic HTTP webhooks, but a
+  push/streaming event API): the Chain Stream WebSocket server streams on-chain
+  events, and the Indexer provides gRPC/gRPC-web streaming endpoints for market and
+  account updates. Agents subscribe to these streams instead of registering webhook
+  callbacks.
+transports:
+- name: Chain Stream WebSocket
+  kind: websocket
+  docs: https://docs.injective.network/infra/websocket-server
+  purpose: Stream real-time Injective chain events (blocks, bank balances, subaccount deposits, spot/derivative orders, trades, positions, oracle prices)
+- name: Indexer streaming (gRPC / gRPC-web)
+  kind: grpc-stream
+  docs: https://docs.injective.network/developers-native/query-indexer-stream/index
+channels:
+- name: account
+  docs: https://docs.injective.network/developers-native/query-indexer-stream/account
+- name: auction
+  docs: https://docs.injective.network/developers-native/query-indexer-stream/auction
+- name: derivatives
+  docs: https://docs.injective.network/developers-native/query-indexer-stream/derivatives
+- name: oracle
+  docs: https://docs.injective.network/developers-native/query-indexer-stream/oracle
+- name: portfolio
+  docs: https://docs.injective.network/developers-native/query-indexer-stream/portfolio
+- name: spot
+  docs: https://docs.injective.network/developers-native/query-indexer-stream/spot
+- name: explorer
+  docs: https://docs.injective.network/developers-native/query-indexer-stream/explorer
+notes: >-
+  No published AsyncAPI document was found; the event surface is documented as
+  WebSocket/gRPC streams. Captured as a Webhooks/event catalog rather than a
+  fabricated AsyncAPI spec.

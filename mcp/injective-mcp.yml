@@ -6,19 +6,20 @@ docs: https://docs.injective.network/developers-ai/mcp
 server:
   name: injective-mcp-server
   transport: stdio
-  install: |
-    git clone https://github.com/InjectiveLabs/mcp-server
+  install: 'git clone https://github.com/InjectiveLabs/mcp-server
+
     cd mcp-server && npm install && npm run build
+
+    '
   config:
     env:
       INJECTIVE_NETWORK: mainnet | testnet
     claude_desktop: ~/Library/Application Support/Claude/claude_desktop_config.json
     claude_code: ~/.claude/mcp.json
   hosting: local
-description: >-
-  Official Injective MCP server (InjectiveLabs/mcp-server) exposing 40+ tools that
-  give AI agents trading and chain capabilities on Injective. Runs locally over the
-  stdio MCP transport and connects to Claude Desktop / Claude Code.
+description: Official Injective MCP server (InjectiveLabs/mcp-server) exposing 40+ tools that give AI
+  agents trading and chain capabilities on Injective. Runs locally over the stdio MCP transport and connects
+  to Claude Desktop / Claude Code.
 tool_groups:
 - name: Address Utilities
   purpose: normalize addresses between inj1... (bech32) and 0x... (EVM) formats
@@ -40,3 +41,8 @@ tool_groups:
   purpose: Peggy and deBridge cross-chain bridging
 - name: EVM
   purpose: raw transaction broadcasting on Injective EVM
+deployment:
+  mode: local-stdio
+  verified: searched
+  checked: '2026-08-12'
+  source: catalog MCP census

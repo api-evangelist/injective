@@ -64,6 +64,108 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Injective is a company surfaced as a portfolio company of pantera-capital and added to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the enrichment pipeline.
+Injective is a Layer 1 blockchain purpose-built for Web3 finance, enabling users, institutions, and AI agents to trade, tokenize, and transact on-chain with native financial primitives including an on-chain central-limit order book, derivatives (perpetuals, expiry and pre-launch futures, options), spot markets, real-world-asset tokenization, stablecoins, and near-zero-fee payments with instant finality. Developers integrate through the Injective Chain LCD/REST API, a high-throughput Indexer API (gRPC, gRPC-web, and REST), a Chain Stream WebSocket for real-time market and account events, first-party SDKs in TypeScript, Python, Go, Rust, and CosmWasm, the injectived CLI, an official Model Context Protocol (MCP) server, and a suite of packaged Agent Skills for AI-driven trading and integration.
 
-Backed by: pantera-capital — https://injectiveprotocol.com/
+**Areas:** Company · Cryptocurrency · Blockchain · DeFi · Trading · Derivatives · Web3 · Layer 1 · Cosmos · Tokenization · Payments · AI Agents
+
+## Injective on APIs.io
+
+Everything profiled for Injective is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/injective/](https://apis.io/providers/injective/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Injective Indexer API](https://apis.io/apis/injective/injective-indexer-api/) — High-throughput read/stream API over the Injective chain and exchange data, exposed via gRPC, gRPC-web, and REST plus a Chain Stream WebSocket. Provides…
+- [Injective Chain API](https://apis.io/apis/injective/injective-chain-api/) — The Injective Chain LCD/REST + Tendermint RPC surface for querying chain state (bank, staking, governance, exchange, oracle, tokenfactory, peggy,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Injective Chain Stream Webhooks](https://apis.io/asyncapis/injective/injective-chain-stream-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [injective-mcp-server](https://apis.io/servers/injective/injective-mcp-server/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Injective Authentication](https://apis.io/security/injective/injective-authentication/)
+- [Injective Domain Security](https://apis.io/security/injective/injective-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://injective.com/)
+- [Documentation](https://docs.injective.network/)
+- [Getting started](https://docs.injective.network/developers/index)
+- [API reference](https://api.injective.network/swagger/)
+- [Support](https://discord.com/invite/injective)
+- [Blog](https://injective.com/blog)
+- [Terms of service](https://injective.com/terms-of-use)
+- [Privacy policy](https://injective.com/privacy-policy)
+- [GitHub](https://github.com/InjectiveLabs)
+- [Status](https://injective.instatus.com/)
+
+## API Evangelist rating
+
+**Kin Score 40.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.7 |
+| Contract quality | 39.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 76.2 |
+| Access clarity | 21.1 |
+
+**Agent readiness 29.7** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 22.3** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/injective/](https://apis.io/providers/injective/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Injective: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/injective/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
